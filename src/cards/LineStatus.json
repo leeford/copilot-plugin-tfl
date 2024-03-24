@@ -1,0 +1,111 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.6",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "Image",
+              "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAYCAYAAADH2bwQAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TRZGqg0VEHDJUJzv4gTjWKhShQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64OroIg+AHi7OCk6CIl/i8ptIjx4Lgf7+497t4BQr3MNKsjBmi6baYScTGTXRW7XhFEH4BBTMjMMuYkKQnf8XWPAF/vojzL/9yfo1fNWQwIiMQxZpg28QbxzKZtcN4nDrOirBKfE4+bdEHiR64rHr9xLrgs8MywmU7NE4eJxUIbK23MiqZGPE0cUTWd8oWMxyrnLc5aucqa9+QvDOX0lWWu0xxBAotYggQRCqoooQwbUVp1UiykaD/u4x92/RK5FHKVwMixgAo0yK4f/A9+d2vlpya9pFAc6HxxnI9RoGsXaNQc5/vYcRonQPAZuNJb/kodmP0kvdbSIkdA/zZwcd3SlD3gcgcYejJkU3alIE0hnwfez+ibssDALdCz5vXW3MfpA5CmrpI3wMEhMFag7HWfd3e39/bvmWZ/P3k7cqmEhGkIAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH6AMOBTUxZJg+ywAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAQSURBVCjPY2AYBaNgFKADAAMYAAFroAIwAAAAAElFTkSuQmCC",
+              "backgroundColor": "${lineColour}",
+              "altText": "Line colour"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${lineName}",
+              "size": "large",
+              "wrap": true,
+              "style": "heading"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "Image",
+              "url": "${modeIconUrl}",
+              "altText": "Mode of transport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "Image",
+              "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAYCAYAAADH2bwQAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TRZGqg0VEHDJUJzv4gTjWKhShQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64OroIg+AHi7OCk6CIl/i8ptIjx4Lgf7+497t4BQr3MNKsjBmi6baYScTGTXRW7XhFEH4BBTMjMMuYkKQnf8XWPAF/vojzL/9yfo1fNWQwIiMQxZpg28QbxzKZtcN4nDrOirBKfE4+bdEHiR64rHr9xLrgs8MywmU7NE4eJxUIbK23MiqZGPE0cUTWd8oWMxyrnLc5aucqa9+QvDOX0lWWu0xxBAotYggQRCqoooQwbUVp1UiykaD/u4x92/RK5FHKVwMixgAo0yK4f/A9+d2vlpya9pFAc6HxxnI9RoGsXaNQc5/vYcRonQPAZuNJb/kodmP0kvdbSIkdA/zZwcd3SlD3gcgcYejJkU3alIE0hnwfez+ibssDALdCz5vXW3MfpA5CmrpI3wMEhMFag7HWfd3e39/bvmWZ/P3k7cqmEhGkIAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH6AMOBTUxZJg+ywAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAQSURBVCjPY2AYBaNgFKADAAMYAAFroAIwAAAAAElFTkSuQmCC",
+              "backgroundColor": "${statusColour}"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "verticalContentAlignment": "center",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${status}",
+              "size": "medium",
+              "wrap": true,
+              "style": "heading"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "separator": true,
+      "spacing": "medium",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "🚧 Disruption(s): ${reason}",
+              "size": "small",
+              "isSubtle": true,
+              "spacing": "small",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "⏱️ Retrieved: ${retrievedDate}",
+              "size": "small",
+              "isSubtle": true,
+              "spacing": "small",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

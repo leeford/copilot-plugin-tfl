@@ -1,0 +1,65 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "<YOUR-MICROSOFT-APP-ID>",
+    "packageName": "com.teams.tfl.bot",
+    "name": {
+        "short": "Transport for London",
+        "full": "Transport for London Bot"
+    },
+    "developer": {
+        "name": "Lee Ford",
+        "mpnId": "",
+        "websiteUrl": "https://www.lee-ford.co.uk",
+        "privacyUrl": "https://www.lee-ford.co.uk",
+        "termsOfUseUrl": "https://www.lee-ford.co.uk"
+    },
+    "description": {
+        "short": "App allows you to search and find the status of TfL services",
+        "full": "Transport for London (Bot) is a very useful tool for finding the status of a Transport for London (TfL) service. By just entering the name of the service(s) you'll be able to easily see the current status of the service. \n\n **Features and Benefits:** \n\n - Easy search using Microsoft 365 Copilot. Simply ask, 'Find the status of the Jubilee line in London?' or 'What is the status of the Bakerloo line?' or 'Is the N98 bus running?'"
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#0019A8",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "<YOUR-MICROSOFT-APP-ID>",
+            "commands": [
+                {
+                    "id": "lineStatus",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for the status of a Transport for London (TfL) services by their line name. For example, 'Jubilee', 'Bakerloo', 'N98'",
+                    "title": "Line status",
+                    "type": "query",
+                    "initialRun": true,
+                    "parameters": [
+                        {
+                            "name": "lineName",
+                            "title": "Line name",
+                            "description": "Enter a line name to find the status of the service. For example, 'Jubilee', 'Bakerloo', 'N98'",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "token.botframework.com",
+        "online.microsoftlogin.com",
+        "*.ngrok.io"
+    ]
+}
